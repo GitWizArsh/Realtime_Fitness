@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-GLhlTQ8iUNdL7I5yZEBePTvZLeBUH9/paPXMt1OW+Sa2U2g2I7d84F5sFkUUTdj" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  </head>
+  <body>
+
+    <section class="container">
+      <header>Real Time Fitness - Registration</header>
+      <form action="#" class="form">
+<!-- Navbar with Text Input Component -->
+    <nav>
+ 	<img src="assets/logo.png" width="100" height="50" alt="Company Logo">
+        <div>
+           
+            <input type="text" class="text-input" placeholder="Search...">
+            <span id="search-error-message" class="feedback-message">Invalid search query.</span>
+            <button>Search</button>
+        </div>
+    </nav>
+
+ <header>
+        <h1>Realtime Fitness Gym</h1>
+        <p>Your path to a healthier lifestyle starts here!</p>
+    </header>
+  <div class="intro-container">
+        <p class="intro-text">Welcome to Realtime Fitness, where we are dedicated to helping you achieve your fitness goals and lead a healthy lifestyle. Our state-of-the-art gym facilities and expert trainers are here to support you every step of the way.</p>
+
+        <p class="intro-text">Why choose Realtime Fitness?</p>
+
+        <div class="icon-container">
+            <div class="gym-icon">&#128170;</div> <!-- Dumbbell Icon -->
+            <div class="gym-icon">&#128187;</div> <!-- Running Icon -->
+            <div class="gym-icon">&#128200;</div> <!-- Weightlifting Icon -->
+        </div>
+
+        <p class="intro-text">Our diverse range of fitness programs includes strength training, cardiovascular exercises, and specialized classes like yoga and aerobics. Whether you're a beginner or an experienced athlete, we have something for everyone.</p>
+
+        <p class="intro-text">Join Realtime Fitness today and embark on a journey towards a healthier and happier you!</p>
+    </div>
+
+    <script>
+        // JavaScript to toggle the visibility of the feedback message
+        const searchInput = document.querySelector('.text-input');
+        const searchErrorMessage = document.getElementById('search-error-message');
+
+        searchInput.addEventListener('input', function () {
+            // Check if the input is valid (you can customize the validation logic)
+            const isValid = searchInput.value.length > 2;
+
+            // Toggle the visibility of the feedback message based on the input validity
+            searchErrorMessage.style.display = isValid ? 'none' : 'block';
+        });
+    </script>
+
+ <header>
+        <h1>Join Us</h1>
+    </header>
+        <fieldset>
+          <legend>Personal Information</legend>
+        <div class="input-box">
+          <label>First Name</label>
+          <input type="text" name="first-name" placeholder="Enter first name" spellcheck="false" />
+        </div>
+        <div class="input-box">
+            <label>Last Name</label>
+            <input type="text" name="last-name" placeholder="Enter last name" spellcheck="false"/>
+          </div>
+
+        <div class="input-box">
+          <label>Email Address</label>
+           <input type="email" id="email" class="text-input" placeholder="Enter your email">
+    <p id="email-error-message" class="feedback-message">Invalid email address.</p>
+
+    <script>
+        // JavaScript to toggle the visibility of the feedback message
+        const emailInput = document.getElementById('email');
+        const emailErrorMessage = document.getElementById('email-error-message');
+
+        emailInput.addEventListener('input', function () {
+            // Check if the input is valid (you can customize the validation logic)
+            const isValid = /\S+@\S+\.\S+/.test(emailInput.value);
+
+            // Toggle the visibility of the feedback message based on the input validity
+            emailErrorMessage.style.display = isValid ? 'none' : 'block';
+        });
+    </script>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Gender</legend>
+        <div class="gender-box">
+          <!-- <h3>Gender</h3> -->
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" checked />
+              <label for="check-male">Male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" />
+              <label for="check-female">Female</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Activities Interested In:</legend>
+        <div class="activities-box">
+          
+          <div class="activity-option">
+            <div class="activity">
+              <input type="checkbox" id="check-yoga" name="activity" />
+              
+              <label for="check-yoga">Yoga</label>
+            </div>
+            <div class="activity">
+              <input type="checkbox" id="check-aerobic" name="activity" />
+              <label for="check-aerobic">Aerobic Exercise</label>
+            </div>
+            <div class="activity">
+              <input type="checkbox" id="check-stretching" name="activity" />
+              <label for="check-stretching">Stretching</label>
+            </div>
+            <div class="activity">
+              <input type="checkbox" id="check-strength-training" name="activity" />
+              <label for="check-strength-training">Strength Training</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Address</legend>
+        <div class="city-box">
+        <label>City:</label>
+        <div class="select-box">
+            <select>
+              <!-- <option hidden>Country</option> -->
+              <option>Toronto</option>
+              <option>Montreal</option>
+              <option>Calgery</option>
+              <option>Ottawa</option>
+              <option>Edmonton</option>
+              <option>Winnipeg</option>
+              <option>Mississauga</option>
+              <option>Vancouver</option>
+              <option>Brampton</option>
+              <option>Hamilton</option>
+            </select>
+          </div>
+        </div>
+        <div class="state-box">
+            <label>State:</label>
+            <div class="select-box">
+                <select>
+                  <!-- <option hidden>Country</option> -->
+                  <option>Ontario</option>
+                  <option>Winnipeg</option>
+
+                </select>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Previous Medical Problem?</legend>
+            <div class="medical-box">
+                <div class="medical-option">
+                  <div class="medical">
+                    <input type="radio" id="check-medical-yes" name="medical" checked />
+                    <label for="check-medical-yes">Yes</label>
+                  </div>
+                  <div class="medical">
+                    <input type="radio" id="check-medical-no" name="medical" />
+                    <label for="check-medical-no">No</label>
+                  </div>
+                </div>
+              </fieldset>
+              </div>
+              <fieldset>
+                <legend>Ever Used Gym Before?</legend>
+              <div class="gym-before-box">
+                <div class="gym-before-option">
+                  <div class="gym-before">
+                    <input type="radio" id="gym-before-yes" name="gym-befpre" checked />
+                    <label for="gym-before-yes">Yes</label>
+                  </div>
+                  <div class="gym-before">
+                    <input type="radio" id="gym-before-no" name="gym-befpre" />
+                    <label for="gym-before-no">No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Preferred Time Slot:</legend>
+              <div class="preferred-time-box">
+                <div class="time-option">
+                  <div class="time">
+                    <input type="checkbox" id="check-5-7am" name="time" />
+                    <label for="check-5-7am">5-7 am</label>
+                  </div>
+                  <div class="time">
+                    <input type="checkbox" id="check-7-9am" name="time" />
+                    <label for="check-7-9am">7-9 am</label>
+                  </div>
+                  <div class="time">
+                    <input type="checkbox" id="check-9-11am" name="time" />
+                    <label for="check-9-11am">9-11 am</label>
+                  </div>
+                  <div class="time">
+                    <input type="checkbox" id="check-5-7pm" name="time" />
+                    <label for="check-5-7pm">5-7 pm</label>
+                  </div>
+                  <div class="time">
+                    <input type="checkbox" id="check-7-9pm" name="time" />
+                    <label for="check-7-9pm">7-9 pm</label>
+                  </div>
+                  <div class="time">
+                    <input type="checkbox" id="check-9-11pm" name="time" />
+                    <label for="check-9-11pm">9-11 pm</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+              <button type="submit">Submit</button>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

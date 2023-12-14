@@ -1,0 +1,372 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(130, 106, 251);
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  /* box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.form .medical-box{
+    margin-top:20px;
+}
+.form .gym-before-box{
+  margin-top:20px;
+}
+.form .city-box{
+    margin-top:20px;
+}
+.city-box label{
+    color:#333
+}
+.form .state-box{
+    margin-top:20px;
+}
+.state-box label{
+    color:#333
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.medical-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .gym-before-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form :where(.medical-option, .medical) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form :where(.gym-before-option, .gym-before) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.form .medical{
+    column-gap: 5px;
+}
+.form .gym-before{
+  column-gap: 5px;
+}
+
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.medical input{
+    accent-color: rgb(130, 106, 251);
+}
+.gym-before input{
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.medical label{
+    color: #707070;
+}
+.gym-before label{
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.form :where(.medical input, .medical label) {
+  cursor: pointer;
+}
+.form :where(.gym-before input, .gym-before label) {
+  cursor: pointer;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+.form button:active {
+  background-color: #218f52;
+  border-color: #218f52;
+}
+/* styles for activities-box and checkboxes */
+.form .activities-box
+,.form .preferred-time-box {
+  margin-top: 20px;
+}
+
+.form .activities-box label,
+.form .preferred-time-box label  {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form .activity-option,
+.form .time-option {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.form .activity,
+.form .time {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.form .activity,
+.form .time {
+  flex-basis: 50%; /* First two checkboxes take up 50% each */
+}
+
+.form .activity input,
+.form .time input {
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.form .activity label,
+.form .time label {
+  color: #707070;
+  margin-top:9px;
+}
+
+.error-border {
+  border-color: red;
+}
+/* .form .activity input:checked + label {
+  color: rgb(130, 106, 251);
+} */
+
+     /* Focus State */
+        .text-input:focus {
+            border-color: #3498db;
+            outline: none; /* Remove default outline on focus for better styling */
+        }
+
+        /* Error State */
+        .text-input.error {
+            border-color: #e74c3c;
+        }
+
+        /* Additional Feedback Styles (optional) */
+        .feedback-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+  	
+fieldset{
+  padding:20px;
+  border-radius: 5px;
+  margin-bottom:20px;
+}
+/*******************custom checkbox*************************/
+input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  height:17px;
+  width:17px;
+  background-color: #d5d5d5;
+  border-radius:2px;
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+input[type="checkbox"]:after{
+  font-family: "Font Awesome 6 Free";
+  font-weight:900; 
+content:"\f00c";
+color:white;
+display: none;
+}
+input[type="checkbox"]:hover{
+  background-color: #a5a5a5;
+}
+input[type="checkbox"]:checked{
+  background-color: rgb(130, 106, 251);;
+}
+input[type="checkbox"]:checked:after{
+  display: block;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+  .form :where(.medical-option, .medical) {
+    row-gap: 15px;
+  }
+}
+
+       /* Navbar Styles */
+        nav {
+            background-color: #333;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        /* Text Input Component Styles */
+        .text-input {
+            padding: 8px;
+            font-size: 14px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+            transition: border-color 0.3s;
+        }
+
+        /* Focus State */
+        .text-input:focus {
+            border-color: #3498db;
+            outline: none; /* Remove default outline on focus for better styling */
+        }
+
+        /* Error State */
+        .text-input.error {
+            border-color: #e74c3c;
+        }
+
+        /* Additional Feedback Styles (optional) */
+        .feedback-message {
+            display: none;
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+.intro-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .gym-icon {
+            font-size: 40px;
+            margin: 10px;
+        }
